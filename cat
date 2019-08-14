@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# vim: filetype=ruby
+
+lib = File.expand_path('lib', __dir__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+class Nyanco
+  def needName
+    puts ''
+    require 'nagakutu/version'
+    puts 'ゆきねこのばーじょん : ' + Neko::VERSION
+  end
+
+  def yuki
+    require 'decrypt'
+  end
+end
+
+puts ''
+puts 'version'.center(70, '-')
+Nyanco.new.needName
+puts ''
+puts 'version'.center(70, '-')
+puts ''
+puts 'decrypt'.center(70, '-')
+Nyanco.new.yuki
+puts ''
+puts 'decrypt'.center(70, '-')
+puts ''
